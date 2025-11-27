@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink Alert - Descarga</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #FFE8E8 0%, #F5F5F5 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 24px;
+            padding: 50px 40px;
+            text-align: center;
+            max-width: 480px;
+            width: 100%;
+            box-shadow: 0 20px 40px rgba(255, 138, 128, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #FFB6C1, #FF91A4);
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 40px;
+            font-weight: 300;
+            box-shadow: 0 8px 20px rgba(255, 182, 193, 0.3);
+        }
+        
+        h1 {
+            color: #FF91A4;
+            margin-bottom: 12px;
+            font-size: 32px;
+            font-weight: 300;
+            letter-spacing: -0.5px;
+        }
+        
+        .subtitle {
+            color: #888;
+            margin-bottom: 35px;
+            font-size: 16px;
+            line-height: 1.5;
+            font-weight: 400;
+        }
+        
+        .qr-section {
+            background: #FAFAFA;
+            padding: 30px;
+            border-radius: 20px;
+            margin: 30px 0;
+            border: 2px dashed #FFB6C1;
+        }
+        
+        .qr-title {
+            color: #FF91A4;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        
+        .qr-code {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            background: #F0F0F0;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 14px;
+            border: 1px solid #EEE;
+        }
+        
+        .download-btn {
+            background: linear-gradient(135deg, #FFB6C1, #FF91A4);
+            color: white;
+            border: none;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-size: 17px;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(255, 145, 164, 0.3);
+            letter-spacing: 0.5px;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 145, 164, 0.4);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin: 30px 0;
+        }
+        
+        .feature {
+            background: #FFF5F7;
+            padding: 14px;
+            border-radius: 12px;
+            font-size: 13px;
+            color: #FF91A4;
+            font-weight: 500;
+            border: 1px solid #FFE8EC;
+        }
+        
+        .instructions {
+            text-align: left;
+            margin: 30px 0;
+            background: #FFF9FA;
+            padding: 25px;
+            border-radius: 16px;
+            border-left: 4px solid #FFB6C1;
+        }
+        
+        .instructions h3 {
+            color: #FF91A4;
+            margin-bottom: 16px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        
+        .instructions ol {
+            margin-left: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 10px;
+            color: #666;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+        
+        .note {
+            background: #FFF3E0;
+            padding: 18px;
+            border-radius: 12px;
+            margin: 25px 0;
+            border-left: 4px solid #FFB74D;
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .info {
+            background: #E8F5E8;
+            padding: 18px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 4px solid #81C784;
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .version {
+            color: #AAA;
+            font-size: 12px;
+            margin-top: 25px;
+            letter-spacing: 0.5px;
+        }
+        img{
+            width: 240px;
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 35px 25px;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .qr-code {
+                width: 180px;
+                height: 180px;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">PA</div>
+        
+        <h1>Pink Alert</h1>
+        <p class="subtitle">Sistema de Seguridad y Alertas en Tiempo Real</p>
+        
+        <div class="qr-section">
+            <div class="qr-title">Escanear para Descargar</div>
+            <div class="qr-code">
+               <img src="img/qrcode-preview (1).svg" 
+         width="300" 
+         height="300"
+         alt="QR Code PinkAlert">
+            </div>
+            <p style="margin-top: 15px; color: #888; font-size: 14px;">
+                Usa la camara de tu telefono para escanear
+            </p>
+        </div>
+        
+        <a href="app_public/pinkalert.apk" class="download-btn" download>
+            Descargar APK
+        </a>
+        
+       
+        
+        <div class="instructions">
+            <h3>Instrucciones de Instalacion</h3>
+            <ol>
+                <li>Descarga el APK usando el boton arriba o escaneando el QR</li>
+                <li>En tu telefono, ve a Ajustes y luego Seguridad</li>
+                <li>Habilita la opcion de Fuentes desconocidas</li>
+                <li>Abre el archivo descargado y presiona Instalar</li>
+                <li>Una vez instalado, abre la aplicacion</li>
+                <li>Listo para usar todas las funciones</li>
+            </ol>
+        </div>
+        
+        
+</body>
+</html>
